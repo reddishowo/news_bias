@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { text, includeLime = false, fastMode = true, numFeatures = 5 } = await request.json();
       // Choose endpoint based on LIME preference
     const endpoint = includeLime ? '/classify_with_explanation' : '/classify';
-    const baseUrl = 'http://localhost:8000';
+    const baseUrl = 'https://brrbrrpatapim-dm.icystone-73750e36.southeastasia.azurecontainerapps.io';
     
     // Prepare request body
     const requestBody: Record<string, unknown> = { text };
